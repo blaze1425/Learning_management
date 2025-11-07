@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LMS Portal</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="header">
     <h1 class="logo">📘 LMS Portal</h1>
-    <div id="userinfo" class="userinfo"></div>
+    <div id="userinfo" class="userinfo" role="status" aria-live="polite"></div>
   </header>
 
   <main id="main">
@@ -19,12 +18,16 @@
       <div class="login-card">
         <h2>Welcome to LMS Portal</h2>
         <p class="subtitle">Your personal learning space</p>
-        <input id="nameInput" type="text" placeholder="Enter your name">
-        <select id="roleSelect">
-          <option value="student">Student</option>
-          <option value="instructor">Instructor</option>
-        </select>
-        <button id="loginBtn">Sign In</button>
+        <form id="loginForm" novalidate>
+          <input id="nameInput" type="text" placeholder="Enter your name" required aria-label="Enter your name" autocomplete="name">
+          <select id="roleSelect" aria-label="Select your role" required>
+            <option value="">Select role...</option>
+            <option value="student">Student</option>
+            <option value="instructor">Instructor</option>
+          </select>
+          <div id="loginError" class="error-message" role="alert" aria-live="assertive"></div>
+          <button id="loginBtn" type="submit">Sign In</button>
+        </form>
       </div>
     </section>
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">📘 LMS Portal</h1>
+    <div id="userinfo" class="userinfo"></div>
+  </header>
+
+  <main id="main">
+    <!-- Login -->
+    <section id="loginSection" class="login-section">
+      <div class="login-card">
+        <h2>Welcome to LMS Portal</h2>
+        <p class="subtitle">Your personal learning space</p>
+        <input id="nameInput" type="text" placeholder="Enter your name">
+        <select id="roleSelect">
+          <option value="student">Student</option>
+          <option value="instructor">Instructor</option>
+        </select>
+        <button id="loginBtn">Sign In</button>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="hidden">
+      <div class="toolbar">
+        <div>
+          <button id="btnCourses">Courses</button>
+          <button id="btnAssignments">Assignments</button>
+          <button id="btnCreateCourse" class="hidden">+ Create Course</button>
+          <button id="btnCreateAssignment" class="hidden">+ New Assignment</button>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Log out</button>
+      </div>
+
+      <div id="contentArea" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modalClose" class="close-btn">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 LMS Portal | Built with ❤️ by test1408</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
